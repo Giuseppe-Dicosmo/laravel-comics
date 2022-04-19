@@ -11,7 +11,7 @@
 <body>
     @include('partials.header')
 
-    <h1>asfs</h1>
+    <h1>La mia home</h1>
 
     @include('partials.footer')
 </body>

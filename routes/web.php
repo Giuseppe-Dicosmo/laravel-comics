@@ -14,60 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/header', function () {
+Route::get('/', function () {
 
     // array per l'header
-    $link = [
-        [
-            "text" => "Characters",
-            "href" => "#",
-        ],
-        [
-            "text" => "Comics",
-            "href" => "#",
-        ],
-        [
-            "text" => "Movies",
-            "href" => "#",
-        ],
-        [
-            "text" => "TV",
-            "href" => "#",
-        ],
-        [
-            "text" => "Games",
-            "href" => "#",
-        ],
-        [
-            "text" => "collectibles",
-            "href" => "#",
-        ],
-        [
-            "text" => "videos",
-            "href" => "#",
-        ],
-        [
-            "text" => "fans",
-            "href" => "#",
-        ],
-        [
-            "text" => "news",
-            "href" => "#",
-        ],
-        [
-            "text" => "shop",
-            "href" => "#",
-        ]
-    ];
 
-    return view('partials.header', [
-        // in questo modo richiama l'array per l'header
-        "link" => $link
-    ]);
-});
-
-
-Route::get('/', function () {
 
     return view('home');
 });
+
+
+// Route::get('/', function () {
+
+//     return view('home');
+// });
