@@ -1,7 +1,14 @@
-//
+@import "./header.scss";
+@import "./main.scss";
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+

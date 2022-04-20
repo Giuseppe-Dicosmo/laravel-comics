@@ -46,13 +46,13 @@ $link = [
 <header>
   <div class="container-header">
     <nav class="container">
-      <figure>
-        <img src="" alt="" />
+      <figure class="container-logo">
+        <img src="{{asset('img/dc-logo.png')}}" alt="" />
       </figure>
-      <ul>
+      <ul class="navbar">
         @foreach($link as $value)
         <li>
-          <a href="{{ $value['href'] }}">
+          <a class="link-nav" href="{{ $value['href'] }}">
             {{ $value["text"] }}
           </a>
         </li>

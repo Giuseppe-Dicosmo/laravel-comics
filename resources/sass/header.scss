@@ -1,0 +1,48 @@
+$brand_blue: #0282f9;
+
+.container-header {
+    height: 10vh;
+    width: 100%;
+
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        align-self: center;
+        height: 100%;
+        list-style-type: none;
+
+        .container-logo {
+            flex-grow: 1;
+            height: 100%;
+            padding: 10px 0;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            flex-flow: row wrap;
+            list-style-type: none;
+            gap: 10px;
+
+            .link-nav {
+                font-size: 13px;
+                text-transform: uppercase;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                border-bottom: 5px solid transparent;
+                color: black;
+
+                &:hover,
+                &.active {
+                    border-bottom: 5px solid $brand_blue;
+                    color: $brand_blue;
+                }
+            }
+        }
+    }
+}

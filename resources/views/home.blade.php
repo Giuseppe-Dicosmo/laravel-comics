@@ -7,7 +7,14 @@
         <button class="button-series">Content series</button>
         <div class="ciao">
             <ul>
-                <fumettiShop v-for="(anteprima, i) in fumetti" :key="i" :src="anteprima.thumb" :title="anteprima.series" />
+                @foreach($comics as $value)
+                <li>
+                    <figure>
+                        <img src="{{ $value['thumb'] }}" alt="" />
+                    </figure>
+                    <h5>{{ $value['title'] }}</h5>
+                </li>
+                @endforeach
             </ul>
         </div>
         <button class="button-more">load more</button>
