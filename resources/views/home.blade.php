@@ -5,11 +5,11 @@
     <span class="Content-jumbotron"></span>
     <div class="container">
         <button class="button-series">Content series</button>
-        <div class="ciao">
-            <ul>
+        <div class="container-fumetti">
+            <ul class="lista-fumetti">
                 @foreach($comics as $value)
-                <li>
-                    <figure>
+                <li class="fumetti">
+                    <figure class="img-fumetti">
                         <img src="{{ $value['thumb'] }}" alt="" />
                     </figure>
                     <h5>{{ $value['title'] }}</h5>
