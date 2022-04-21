@@ -2,7 +2,7 @@
 $link = [
 [
 "text" => "Characters",
-"href" => "#",
+"href" => "/",
 ],
 [
 "text" => "Comics",

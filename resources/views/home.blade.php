@@ -7,12 +7,14 @@
         <button class="button-series">Content series</button>
         <div class="container-fumetti">
             <ul class="lista-fumetti">
-                @foreach($comics as $value)
+                @foreach($comics as $indice => $value)
                 <li class="fumetti">
-                    <figure class="img-fumetti">
-                        <img src="{{ $value['thumb'] }}" alt="" />
-                    </figure>
-                    <h5>{{ $value['title'] }}</h5>
+                    <a class="link-home" href="{{ route('articolo.show', ['id' => $indice]) }}">
+                        <figure class="img-fumetti">
+                            <img src="{{ $value['thumb'] }}" alt="" />
+                        </figure>
+                        <h5>{{ $value['title'] }}</h5>
+                    </a>
                 </li>
                 @endforeach
             </ul>

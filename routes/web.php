@@ -22,9 +22,20 @@ Route::get('/', function () {
     $comics = config('comics');
 
     return view('home', [
+        // Per dichiarare un parametro possiamo metterlodentro a un array E possiamo dichiarare più parametri alla volta
+
         "comics" => $comics
+
+        //* "nome" => $nome
+        //* "cognome" => $cognome
     ]);
-});
+
+    // Oppure usando un with pero possiamo dichiarare un parametro alla volta
+    //* return view('home')
+    //* ->with("comics",$comics)
+    //* ->with("nome",$nome);
+    //* ->with("cognome",$cognome);
+})->name('articolo.index');
 
 
 Route::get('/articolo/{id}', function ($id) {
@@ -47,10 +58,14 @@ Route::get('/articolo/{id}', function ($id) {
     // versione abbreviata
     abort_unless(isset($comics[$id]), 403);
 
+    // prendiamo solo $comics[$id] della lista
+    $comics = $comics[$id];
+
     return view('web-pages.articolo', [
         "comics" => $comics
     ]);
 
     // Possiamo specificare che questo parametro deve rispettare solo un valore numerico
     // https://laravel.com/docs/7.x/routing#route-parameters
-})->where('id', '[0-9]+');
+    // ed è un metodo che è conteniamo alla nostra "Route"
+})->where('id', '[0-9]+')->name('articolo.show');
